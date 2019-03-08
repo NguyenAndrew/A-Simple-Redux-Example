@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Output from './Output';
 
 const canUseDOM = !!(
   (typeof window !== 'undefined' &&
@@ -43,9 +44,7 @@ class App extends Component {
           </form>
         </div>
 
-        <div className="Output">
-          Output: {this.state.submittedValue}
-        </div>
+        <Output submittedValue={this.state.submittedValue}/>
 
       </div>
     );
