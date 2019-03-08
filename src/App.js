@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from './Input';
 import Output from './Output';
 
 const canUseDOM = !!(
@@ -34,18 +35,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <div className="Input">
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Input: <input type="text" value={this.state.inputValue} onChange={this.handleChange} />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-
-        <Output submittedValue={this.state.submittedValue}/>
-
+        <Input inputValue={this.state.inputValue} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+        <Output submittedValue={this.state.submittedValue} />
       </div>
     );
   }
