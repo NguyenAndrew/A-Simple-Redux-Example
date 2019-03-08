@@ -1,0 +1,39 @@
+{
+  "name": "insert_name_of_application_react_spa",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "babel-node -- node_modules/cucumber/bin/cucumber-js test/features --require test/step_definitions",
+    "test:watch": "babel-watch --watch src --watch test -- node_modules/cucumber/bin/cucumber-js test/features --require test/step_definitions",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-watch": "^7.0.0",
+    "cucumber": "^5.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jsdom": "^13.1.0",
+    "nock": "^10.0.6"
+  }
+}
