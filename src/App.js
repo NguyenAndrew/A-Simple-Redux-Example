@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Output from './Output';
+import { connect } from 'react-redux';
 
 const canUseDOM = !!(
   (typeof window !== 'undefined' &&
@@ -12,11 +13,11 @@ if (canUseDOM) {
 
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       'inputValue': '',
-      'submittedValue': 'Nothing has been submitted yet'
+      'submittedValue': this.props.submittedValue
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -33,6 +34,8 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props);
+
     return (
       <div className="App">
         <Input inputValue={this.state.inputValue} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
@@ -42,4 +45,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return state;
+}
+
+export default connect(mapStateToProps)(App);
