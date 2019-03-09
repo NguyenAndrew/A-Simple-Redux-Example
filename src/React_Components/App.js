@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Input />
+        <Input defaultInput={'Hello World!'}/>
         <Output />
       </div>
     );
