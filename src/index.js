@@ -1,27 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// Other Imports
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// Start Redux
-import { createStore, combineReducers } from 'redux';
+// React Imports
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './React_Components/App';
+
+// Redux Imports
 import { Provider } from 'react-redux';
-import submittedValueReducer from './reducers/submittedValueReducer';
-
-const allReducers = combineReducers({
-    submittedValue: submittedValueReducer
-});
-
-const store = createStore(
-    allReducers,
-    {
-        submittedValue: ')sdrawkcaB ti daeR( Nothing has been submitted yet'
-    },
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-// End Redux
-
+import { store } from './Redux/store';
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

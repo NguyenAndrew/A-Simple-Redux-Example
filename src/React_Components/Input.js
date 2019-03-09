@@ -1,6 +1,9 @@
+// React Imports
 import React, { Component } from 'react';
+
+// Redux Imports
 import { connect } from 'react-redux';
-import { submitValue } from './actions/submittedValueActions';
+import { submitValue } from '../Redux/actions/submittedValueActions';
 
 class Input extends Component {
     constructor(props) {
@@ -36,8 +39,11 @@ class Input extends Component {
     }
 }
 
+// onSubmitValue is used to avoid naming conflicts with submitValue
 const mapActionsToProps = {
     onSubmitValue: submitValue
 }
 
+// The first value would be mapStateToProps, if mapStateToProps was needed.
+// Connecting mapActionsToProps lets this component use actions defined in ../Redux/actions from this.props
 export default connect(null, mapActionsToProps)(Input);
