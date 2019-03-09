@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// Redux
+// Start Redux
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import submittedValueReducer from './reducers/submittedValueReducer';
