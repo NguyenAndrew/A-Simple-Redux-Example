@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Input from './Input';
 import Output from './Output';
 import { connect } from 'react-redux';
+import { submitValue } from './actions/submittedValueActions';
 
 const canUseDOM = !!(
   (typeof window !== 'undefined' &&
@@ -17,7 +18,6 @@ class App extends Component {
     super(props);
     this.state = {
       'inputValue': '',
-      'submittedValue': this.props.submittedValue
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   handleSubmit(event) {
-    this.setState({ submittedValue: this.state.inputValue });
+    this.props.onSubmitValue(this.state.inputValue);
     event.preventDefault();
   }
 
@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <Input inputValue={this.state.inputValue} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
-        <Output submittedValue={this.state.submittedValue} />
+        <Output submittedValue={this.props.submittedValue} />
       </div>
     );
   }
@@ -49,4 +49,8 @@ const mapStateToProps = state => {
   return state;
 }
 
-export default connect(mapStateToProps)(App);
+const mapActionsToProps = {
+  onSubmitValue: submitValue
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(App);
