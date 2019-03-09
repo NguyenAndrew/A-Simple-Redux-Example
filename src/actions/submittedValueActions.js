@@ -1,4 +1,4 @@
-export const SUBMIT_VALUE = 'submittedValue: submitValue'
+export const SUBMIT_VALUE = 'SUBMIT_VALUE';
 
 export function submitValue(input) {
     return {

@@ -16,7 +16,7 @@ const allReducers = combineReducers({
 const store = createStore(
     allReducers,
     {
-        submittedValue: 'Nothing has been submitted yet'
+        submittedValue: ')sdrawkcaB ti daeR( Nothing has been submitted yet'
     },
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
