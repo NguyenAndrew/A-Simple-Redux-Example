@@ -8,8 +8,8 @@ Learn how to use Redux with React. This sample is organized to be understandable
 1. Install your dependencies with ```npm install```
 2. Run your application with ```npm start```
 3. Read index.js
-4. Read the all the files in Redux
-5. Read all the .js files in React_Components
+4. Read the all the files in the 'Redux' folder
+5. Read all the .js files in the 'React_Components' folder
 
 ---
 
