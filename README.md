@@ -2,8 +2,9 @@
 
 Learn how to use Redux with React. This sample is organized to be understandable, reusable and enjoyable!
 
-## Quickstart
+## Quickstart - https://andyln.com/A-Simple-Redux-Example/
 
+0. Download or Clone the project
 1. Install your dependencies with ```npm install```
 2. Run your application with ```npm start```
 3. Read index.js
