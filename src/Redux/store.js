@@ -1,8 +1,9 @@
 import { createStore, combineReducers } from 'redux';
 import submittedValueReducer from './reducers/submittedValueReducer';
 
-// Combine reducers allows multiple reducers to be used with createStore, as shown below in
-// 'export const store = createStore(...);'.
+// combineReducers takes in multiple reducers, and returns a single reducer to be used in the createStore(...) function.
+// combineReducers takes in multiple 'key : value' pairs to combine the reducers.
+// The key is the name of variable within state (in the redux store), and the value is the reducer used to change that variable.
 const allReducers = combineReducers({
     submittedValue: submittedValueReducer
 });
@@ -11,7 +12,7 @@ const allReducers = combineReducers({
 // In this case: 
 // 1. Is the allReducer defined above
 // 2. Are the intial values of the state within the redux store
-// 3. Allows the store to be viewed within the Redux Tools Extension, a very useful must-have tool when working with Redux.
+// 3. Allows the store to be viewed within the Redux Tools Extension, a recommended tool when working with Redux.
 // https://redux.js.org/api/createstore
 export const store = createStore(
     allReducers,
